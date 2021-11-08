@@ -3,6 +3,9 @@ package com.practice.ems.service;
 import com.practice.ems.model.Employee;
 import com.practice.ems.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -39,5 +42,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void deleteEmployeeById(long id) {
         this.employeeRepository.deleteById(id);
+    }
+
+    @Override
+    public Page<Employee> findPaginated(int pageNo, int pageSize) {
+        //Note: Spring Data JPA provides page no. with a zero base.
+        Pageable pageable = PageRequest.of(pageNo - 1, pageSize);   //PageRequest implements Pageable interface
+        return this.employeeRepository.findAll(pageable);
     }
 }
