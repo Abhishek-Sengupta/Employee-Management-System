@@ -29,9 +29,9 @@ This project is a small web application for Employee Management System, made usi
 1. Create a MySQL connection in MySQL workbench with your username and password.
 2. Create a DB named ems in MySQL workbench.
 3. Specify/modify the following in the application.properties file (in /src/main/resources/):
-   spring.datasource.url=jdbc:mysql://localhost:3306/ems?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
-   spring.datasource.username=
-   spring.datasource.password=
+   spring.datasource.url=jdbc:mysql://localhost:3306/ems?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false</br>
+   spring.datasource.username=</br>
+   spring.datasource.password=</br>
    
 4. Run EmsApplication.java (in /src/..../ems/) which is the entry point to the Spring Application.
 5. Navigate to localhost:8080 on the browser.
