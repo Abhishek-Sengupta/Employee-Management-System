@@ -1,10 +1,10 @@
-##Project Description
+## Project Description
 
 This project is a small web application for Employee Management System, made using Java, Spring-Boot, Hibernate, Thymeleaf, Maven & MySQL.
 
-####Browser <-> Controller <-> Service <-> DAO <-> DB
+#### Browser <-> Controller <-> Service <-> DAO <-> DB
 
-###Methodology
+### Methodology
 
 1. Set up the Database using MySQL workbench & provide DB connection info in the application.properties file.
 2. Create JPA Entity (Employee.java in /src/...../model/)
@@ -18,14 +18,14 @@ This project is a small web application for Employee Management System, made usi
 5. Create the Controller (EmployeeController.java in /src/...../controller/) which exposes the APIs for method handlers against the methods implemented in the service layer & returns the view.
 6. Create the View Layer (index.html, new_employee.html, update_employee.html in /resources/templates/) which renders the UI in the browser.
 
-####Functionalities Implemented -
+#### Functionalities Implemented -
 
 1. View List of Employees and their details in a paginated format.
 2. Add a new employee.
 3. Update employee details.
 4. Delete an employee.
 
-####Running the application -
+#### Running the application -
 1. Create a MySQL connection in MySQL workbench with your username and password.
 2. Create a DB named ems in MySQL workbench.
 3. Specify/modify the following in the application.properties file (in /src/main/resources/):
